@@ -1,0 +1,6 @@
+ca/
+certs/
+*.key
+*.crt
+*.csr
+*.srl

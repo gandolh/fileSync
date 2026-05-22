@@ -1,0 +1,4 @@
+[
+  { "name": "node-a", "host": "node-a.local", "port": 3443 },
+  { "name": "node-b", "host": "node-b.local", "port": 3443 }
+]

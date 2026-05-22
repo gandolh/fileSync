@@ -141,4 +141,28 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
-data
+
+# fileSync — runtime data (per-node file storage)
+server/data/
+data/
+
+# fileSync — secrets & TLS material (NEVER commit)
+# Private CA root + per-node certs/keys live under infrastructure/.
+# Only ca.crt is safe to share; everything else stays local.
+infrastructure/ca/
+infrastructure/certs/
+**/server.key
+**/server.crt
+**/server.csr
+**/*.srl
+
+# fileSync — per-node config may contain hostnames / topology you don't want public
+infrastructure/compose/*/config/server.json
+infrastructure/compose/*/config/peers.json
+server/config/server.json
+server/config/peers.json
+
+# dotenv (already covered above, repeated for clarity around the shared secret)
+.env
+.env.local
+.env.*.local

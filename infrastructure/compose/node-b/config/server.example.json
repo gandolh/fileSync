@@ -1,0 +1,7 @@
+{
+  "name": "node-b",
+  "port": 3443,
+  "dataDir": "/app/data",
+  "certsDir": "/app/certs",
+  "syncIntervalMs": 30000
+}
